@@ -31,3 +31,16 @@ export default {
   }
 };
 </script>
+
+<style lang="scss">
+@import "../assets/style/_reset";
+
+.top {
+  background-image: linear-gradient(145deg, skyblue 20%, salmon 85%);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: $padding;
+}
+
+</style>

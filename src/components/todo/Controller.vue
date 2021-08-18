@@ -1,10 +1,10 @@
 <template>
   <div class="controller">
-    <select>
+    <select class="controller__select">
       <option>오래된순</option>
       <option>최신순</option>
     </select>
-    <a class="remove_all">
+    <a class="controller__remove">
       <span>모두 삭제</span>
     </a>
   </div>
