@@ -18,6 +18,7 @@ export default {
   &__date {
     font-size: 1.2rem;
     letter-spacing: 0.02rem;
+    color: #fff;
   }
 }
 
@@ -27,8 +28,5 @@ export default {
   height: 1.6rem;
   background-repeat: no-repeat;
 }
-
-
-
 
 </style>
