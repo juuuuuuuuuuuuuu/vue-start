@@ -43,4 +43,10 @@ export default {
   padding: $padding;
 }
 
+.content {
+  display: flex;
+  flex-direction: column;
+  padding: $padding;
+}
+
 </style>
