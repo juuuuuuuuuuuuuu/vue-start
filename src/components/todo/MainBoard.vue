@@ -2,13 +2,17 @@
   <div class="main_bord">
     <span class="main_bord__title">진행률</span>
     <span class="todo_count">
-      <em class="todo_count__count">1</em>
-      <em class="todo_count__total">/ 2</em>
+      <em class="todo_count__count">{{completeCount}}</em>
+      <em class="todo_count__total">/ {{totalCount}}</em>
     </span>
   </div>
 </template>
 <script>
 export default {
+  computed: {
+    totalCount() { return this.$store.getters.totalCount },
+    completeCount() { return this.$store.getters.complete },
+  }
 }
 </script>
 

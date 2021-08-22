@@ -1,22 +1,35 @@
 <template>
   <ul class="list">
-    <li class="list__item">
+    <li v-for="todo in todoItems" v-bind:key="todo.id" class="list__item">
       <div class="list__left">
         <label class="checkbox">
           <input type="checkbox" />
           <span class="checkbox__icon"></span>
-          <span class="checkbox__text">공부</span>
+          <span class="checkbox__text">{{todo.text}}</span>
         </label>
       </div>
       <div class="list__right">
-        <button class="list__delete"></button>
-        <span class="list__dueDate">5/17</span>
+        <button class="list__delete" v-on:click="deleteItem(todo.id)"></button>
+        <span class="list__dueDate">{{todo.dueDate}}</span>
       </div>
     </li>
   </ul>
 </template>
 <script>
-export default {};
+import { mapMutations } from 'vuex';
+
+export default {
+  computed: {
+    todoItems() {
+      return this.$store.state.todoItems;
+    },
+  },
+  methods: {
+    ...mapMutations({
+      deleteItem: "delete",
+    })
+  },
+};
 </script>
 
 <style lang="scss">
