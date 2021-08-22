@@ -35,6 +35,11 @@ export default {
 <style lang="scss">
 @import "../assets/style/_reset";
 
+body {
+  height: 100%;
+  background-color: #efefef !important;
+}
+
 .top {
   background-image: linear-gradient(145deg, skyblue 20%, salmon 85%);
   width: 100%;
